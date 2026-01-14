@@ -2,30 +2,46 @@ import argparse, yaml, os, subprocess, logging
 import pandas as pd
 from utils import submit_job_and_wait
 
+def has_flag(script_path: str, flag: str) -> bool:
+    try:
+        out = subprocess.run(
+            ["python", script_path, "-h"],
+            capture_output=True,
+            text=True,
+            check=False
+        )
+        help_text = (out.stdout or "") + (out.stderr or "")
+        return flag in help_text
+    except Exception:
+        return False
+
 # Run this script in a lightweight job
 def univar_top_features(config, base_save_path: str, dis_name: str):
     """
     Select top univariate features
     """
-    # Select the features based on some threshold
     univar_path = f"{base_save_path}/{config['inputs']['disease_type']}_popu-{config['inputs']['popu_type']}/univar_association_testing/{dis_name}"
-    if not os.path.exists(f"{univar_path}/univar_regression_results.tsv"):
-        return None
-    
-    res_df = pd.read_csv(f"{univar_path}/univar_regression_results.tsv", sep="\t")
+
+    # >>> CHANGE: fallback to _seismic path if the default path doesn't exist
+    res_path = f"{univar_path}/univar_regression_results.tsv"
+    if not os.path.exists(res_path):
+        univar_path = f"{base_save_path}/_seismic/{config['inputs']['disease_type']}_popu-{config['inputs']['popu_type']}/univar_association_testing/{dis_name}"
+        res_path = f"{univar_path}/univar_regression_results.tsv"
+        if not os.path.exists(res_path):
+            return None
+
+    res_df = pd.read_csv(res_path, sep="\t")
     col = config["univar_to_multivar"]["column_to_choose"]
     thres = config["univar_to_multivar"]["thres"]
     selected = res_df[res_df[col] <= thres].copy()["cell_tissue"].tolist()
 
-    # If there is no feature left, return None
     if len(selected) == 0:
         return None
 
-    # Create a new atlas_smal based on the selected features
     atlas_smal_path = pd.read_csv(config["inputs"]["atlas_smal_path"], sep="\t")
     atlas_df_sub = atlas_smal_path[selected + ["gene"]]
     atlas_df_sub.to_csv(
-        f"{univar_path}/atlas_smal_path_sig_cel_tis_filtered.tsv", 
+        f"{univar_path}/atlas_smal_path_sig_cel_tis_filtered.tsv",
         sep="\t", index=False
     )
     return f"{univar_path}/atlas_smal_path_sig_cel_tis_filtered.tsv"
@@ -66,14 +82,17 @@ def main(args):
             
         logging.error(f"Start running on {dis_name}...")
 
-        # Run univariate regression
+     # Run univariate regression
         logging.error(">>> Start running univariate regression")
         logging.error(f">>> Univariate params: {config['univariate']}")
         sub_args = [
-            "--atlas_smal_path", config['inputs']['atlas_smal_path'], 
-            "--atlas_path", config['inputs']['atlas_path'], 
+            "--atlas_smal_path", config['inputs']['atlas_smal_path'],
+            "--atlas_path", config['inputs']['atlas_path'],
             "--save_path", base_save_path,
             "--save_path_suffix", "",
+            "--disease_prot_dir", config['inputs']['disease_prot_dir'],
+            "--disease_type", config['inputs']['disease_type'],
+            "--popu_type", config['inputs']['popu_type'],
             "--disease_name", dis_name,
             "--output_label", config['univariate']['output_label'],
             "--abs_hr", str(config['univariate']['abs_hr']),
@@ -81,11 +100,25 @@ def main(args):
             "--covar_gini", str(config['univariate']['covar_gini']),
             "--ztransform_type", str(config['univariate']['ztransform_type'])
         ]
-        command = ["python", config['constants']["univar_script_path"]] + sub_args
+# LSF-required accounting project
+        project = config.get("lsf", {}).get("project", "acc_DiseaseGeneCell")
+
+       
+        bsub_prefix = [
+            "bsub",
+            "-P", project,
+            "-n", "1",
+            "-W", "00:30",
+            "-R", "rusage[mem=8000]",
+            "-oo", f"{base_save_path}/univar_job_%J.stdout",
+            "-eo", f"{base_save_path}/univar_job_%J.stderr"
+        ]
+
+        command = bsub_prefix + ["python", config['constants']["univar_script_path"]] + sub_args
+
         try:
             submit_job_and_wait(command, wait_time=10)
         except Exception as e:
-            # Something wrong with the run, then continue
             logging.error(f">>> Something went wrong for univariate regression! Error log: {e}")
 
         # Extract the atlas_smal from the significant features found by univariate
@@ -96,29 +129,56 @@ def main(args):
         if new_atlas_smal is None:
             logging.error(f">>> No significant features given the current univariate threshold, or univariate did not run successfully!")
             continue
-
-        # Run elasticnet
-        if (config["elasticnet_kfold"]["run"] == 1):
+# Run elasticnet
+        if config["elasticnet_kfold"]["run"] == 1:
             logging.error(">>> Start running elasticnet...")
             logging.error(f">>> Elasticnet params: {config['elasticnet_kfold']}")
-            sub_args = [
-                "--atlas_smal_path", new_atlas_smal, 
-                "--atlas_path", config['inputs']['atlas_path'], 
-                "--save_path", base_save_path,
-                "--save_path_suffix", "",
-                "--disease_name", dis_name,
-                "--output_label", config['elasticnet_kfold']['output_label'],
-                "--abs_hr", str(config['elasticnet_kfold']['abs_hr']),
-                "--num_alpha", str(config['elasticnet_kfold']['num_alpha']),
-                "--num_folds", str(config['elasticnet_kfold']['num_folds']),
-                "--gene_weight", str(config['elasticnet_kfold']['gene_weight']),
-                "--ztransform_type", str(config['elasticnet_kfold']['ztransform_type']),
-                "--pos_coef", str(config['elasticnet_kfold']['pos_coef'])
-            ]
-            command = ["python", config['constants']["enet_script_path"]] + sub_args
-            # submit_job_and_wait(command, wait_time=30)
-            subprocess.run(command)
 
+            enet_script = config["constants"]["enet_script_path"]
+
+            sub_args = [
+                "--atlas_smal_path", new_atlas_smal,
+                "--atlas_path", config["inputs"]["atlas_path"],
+                "--save_path", base_save_path,
+                "--save_path_suffix", "", # REQUIRED by elastic_kfold_ver2_auto-script.py
+                "--output_label", config["elasticnet_kfold"]["output_label"],
+                "--abs_hr", str(config["elasticnet_kfold"]["abs_hr"]),
+                "--num_folds", str(config["elasticnet_kfold"]["num_folds"]),
+                "--gene_weight", str(config["elasticnet_kfold"]["gene_weight"]),
+                "--ztransform_type", str(config["elasticnet_kfold"]["ztransform_type"]),
+                "--pos_coef", str(config["elasticnet_kfold"]["pos_coef"]),
+            ]
+
+            # These may be optional in argparse, but your autoscript *uses* them to locate prot data.
+            if has_flag(enet_script, "--disease_prot_dir"):
+                sub_args += ["--disease_prot_dir", config["inputs"]["disease_prot_dir"]]
+            if has_flag(enet_script, "--disease_type"):
+                sub_args += ["--disease_type", config["inputs"]["disease_type"]]
+            if has_flag(enet_script, "--popu_type"):
+                sub_args += ["--popu_type", config["inputs"]["popu_type"]]
+
+            # disease flag name differs across scripts
+            if has_flag(enet_script, "--disease_name"):
+                sub_args += ["--disease_name", dis_name]
+            elif has_flag(enet_script, "--disease"):
+                sub_args += ["--disease", dis_name]
+
+            # num_alpha vs num_alphas naming mismatch across scripts
+            if has_flag(enet_script, "--num_alpha"):
+                sub_args += ["--num_alpha", str(config["elasticnet_kfold"]["num_alpha"])]
+            elif has_flag(enet_script, "--num_alphas"):
+                sub_args += ["--num_alphas", str(config["elasticnet_kfold"]["num_alpha"])]
+
+            command = ["python", enet_script] + sub_args
+
+            enet_root = (
+                f"{base_save_path}/"
+                f"{config['inputs']['disease_type']}_popu-{config['inputs']['popu_type']}/"
+                f"elastic_kfold_ver2"
+            )
+            os.makedirs(os.path.join(enet_root, dis_name), exist_ok=True)
+
+            subprocess.run(command, check=True)
         # Run Lasso stability selection
         if (config["stability_selection"]["run"] == 1):
             logging.error(">>> Start running stability selection...")

@@ -5,7 +5,6 @@ import pandas as pd
 from scipy.stats import norm, shapiro, t
 import statsmodels.formula.api as smf
 from statsmodels.stats.multitest import multipletests
-
 from sklearn.preprocessing import StandardScaler
 from utils import *
 
@@ -16,13 +15,16 @@ def _gini_coeff(df, g):
 
     arr = arr[arr > 0.0]
     
+    # If no positive values left after filtering, return NaN
+    if len(arr) == 0:
+        return np.nan
+    
     x = np.sort(arr)
     n = len(x)
     cumx = np.cumsum(x)
     
     gini = (n + 1 - 2 * np.sum(cumx) / cumx[-1]) / n
     return gini
-
 
 def compute_covariates(args, atlas_smal):
     """
@@ -66,55 +68,59 @@ def univariate_testing(args, atlas_smal, prot_spec_final, covar_df=None):
     else: scaled = atlas_smal.to_numpy()
     result_df = pd.DataFrame(scaled, columns=atlas_smal.columns, index=atlas_smal.index)
 
-    # Because of python string format, replace all . with _
     old_col_names = result_df.columns.tolist()
-    new_col_names = [i.replace(".", "_") for i in result_df.columns.tolist()]
-    result_df.columns = new_col_names
-    cell_tis = new_col_names
+    cell_tis = old_col_names
+    # Helper: safely quote arbitrary column names in patsy/statsmodels formulas
+    def q(name: str) -> str:
+        safe = str(name).replace('"', r'\"')
+        return f'Q("{safe}")'
 
     # Add covariates if any
     covar_cols = []
     if covar_df is not None:
         result_df = result_df.merge(covar_df, right_index=True, left_index=True)
         covar_cols = covar_df.columns.tolist()
-    prot_df_sub = prot_spec_final[[args.output_label]]
+    prot_df_sub = prot_spec_final[[args.output_label]].copy()
     if args.abs_hr == 1:
         prot_df_sub[args.output_label] = np.abs(prot_df_sub[args.output_label])
     result_df = result_df.merge(prot_df_sub, right_index=True, left_index=True)
 
     logging.error(covar_cols)
     logging.error(covar_df)
-
-    # Loop over each cell-tissue in the dataset
+    
     final_df = []
+    # Loop over each cell-tissue in the dataset
     for old_ct, ct in zip(old_col_names, cell_tis):
-
         indep_var = ct
         all_cols = covar_cols + [indep_var, args.output_label]
         logging.error(f"Processing {ct}")
         result_df_ct = result_df[all_cols].dropna()
 
         covariates = covar_cols
-        formula = args.output_label + " ~ " + " + ".join([indep_var] + covariates)
+        # >>> IMPORTANT: formula must use Q(...) (your quoting helper)
+        formula = f"{args.output_label} ~ {q(indep_var)}" + (
+            "" if len(covariates) == 0 else " + " + " + ".join(covariates)
+        )
 
-        # Linear regression
         model = smf.ols(formula, data=result_df_ct).fit()
+
         with open(f"{args.save_path}/model_summary.txt", "a") as f:
             f.write(f"Linear model for {old_ct}\n")
             f.write(model.summary().as_text())
             f.write("\n===============================\n")
 
-        # Residual normality test
         shapiro_p = shapiro(model.resid)[1]
 
-        # Extract coefficients
         coeffs = model.params
         tvals = model.tvalues
         pvals = model.pvalues
 
-        beta_indep = coeffs[indep_var]
-        tval_indep = tvals[indep_var]
-        pval_indep = pvals[indep_var]
+        # >>> NOTE: when using Q(...), the key in params/tvalues/pvalues is the *quoted* term
+        term = q(indep_var)
+
+        beta_indep = coeffs[term]
+        tval_indep = tvals[term]
+        pval_indep = pvals[term]
 
         intc = coeffs["Intercept"]
         tval_intc = tvals["Intercept"]
@@ -122,15 +128,18 @@ def univariate_testing(args, atlas_smal, prot_spec_final, covar_df=None):
 
         r2 = model.rsquared
 
-        # One-sided test
         df_resid = model.df_resid
-        # pval_one_sided = 1 - t.cdf(tval_indep, df=df_resid)       # This is the original implementation
-        p_two_sided = 2 * (1 - t.cdf(abs(tval_indep), df=df_resid))         # # This is the implementation to match the results from seismic
-        if beta_indep > 0: pval_one_sided = p_two_sided / 2
-        else: pval_one_sided = 1 - p_two_sided / 2
+        p_two_sided = 2 * (1 - t.cdf(abs(tval_indep), df=df_resid))
+        if beta_indep > 0:
+            pval_one_sided = p_two_sided / 2
+        else:
+            pval_one_sided = 1 - p_two_sided / 2
 
         # Append
-        final_df.append([old_ct, beta_indep, pval_indep, tval_indep, intc, pval_intc, tval_intc, r2, shapiro_p, pval_one_sided])
+        final_df.append([
+            old_ct, beta_indep, pval_indep, tval_indep,
+            intc, pval_intc, tval_intc, r2, shapiro_p, pval_one_sided
+        ])
 
     ### Save results
     final_df = pd.DataFrame(final_df, columns=[

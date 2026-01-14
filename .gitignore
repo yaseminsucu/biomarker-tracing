@@ -1,3 +1,18 @@
-old_code/
-*/__pycache__/
-.ipynb_checkpoints/
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs / outputs
+*.log
+logs/
+results/
+output/
+tmp/
+
+# Editor / backups
+*~
+*.backup

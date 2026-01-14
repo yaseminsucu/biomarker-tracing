@@ -7,13 +7,14 @@ suppressMessages({
   library("dplyr")
   library("tidyr")
   library("data.table")
-  # library('seismicGWAS')
   library("stringr")
   library("glue")
+
+  library("seismicGWAS")          # for calc_specificity()
+  library("SingleCellExperiment") # for as.SingleCellExperiment()
+  library("speedglm")             # used in get_ct_trait_associations()
 })
 
-#' get_ct_trait_associations
-#' Rewrite this function a bit to fit with proteomic input
 #'
 #' @param sscore: Matrix from calc_specificity
 #' @param magma: data.table from prot_df
@@ -58,11 +59,11 @@ get_ct_trait_associations <- function(sscore, magma, magma_gene_col = "GENE",
 
 
 # Paths
-seurat_obj_path = ""    # Seurat path
+seurat_obj_path = "/hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/gnpc_run_2/gnpc_updated_pipeline/tabula_sapiens_cortical_cells_atlas_all-genes_downsamp.qs"
 thres = 50              # Minimum number of cells in each cell type
-gene_path = ""          # Path to a dataframe with $gene as column, $gene containing all proteomic genes
-cell_spec_save_path = ""  # Path to save seismic cell type specificity table
-run_name = ""           # Run name
+gene_path = "/hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/gnpc_run_2/gnpc_updated_pipeline/gnpc_AD_genes_for_seismic_ensembl.tsv"
+cell_spec_save_path = "/hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/gnpc_run_2/gnpc_updated_pipeline/seismic_results/seismic_gnpc_AD_specificity.tsv"
+run_name = "GNPC_AD_SEISMIC"
 
 # Read in seurat obj
 seu = qread(seurat_obj_path)
@@ -89,7 +90,7 @@ seu_smal = NormalizeData(seu_smal)
 seu_diet = DietSeurat(seu_smal, features = gene_names)
 seu_sce = as.SingleCellExperiment(seu_diet)
 seismic_spec_scores <- calc_specificity(
-  seu_sce, ct_label_col='cell_tissue', 
+  seu_sce, ct_label_col='cell_tissue',
   min_avg_exp_ct=0.0, min_cells_gene_exp=0, min_uniq_ct=0,
   min_ct_size = 0
 )
@@ -100,6 +101,9 @@ rownames(seismic_df) = NULL
 # Using seismic calc_specificity as is, there are genes that are in the SCE object
 # but are all NaN in seismic's specificity score (e.g. ENSG00000243509 for HPA data)
 # that is because in the original SCE object the gene has 0 expression across all cells
-fwrite(seismic_df, cell_spec_save_path, 
+
+dir.create(dirname(cell_spec_save_path), recursive = TRUE, showWarnings = FALSE)
+
+fwrite(seismic_df, cell_spec_save_path,
   sep="\t", quote=FALSE, row.names=FALSE
 )

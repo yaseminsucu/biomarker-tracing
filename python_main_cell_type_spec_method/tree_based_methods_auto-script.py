@@ -1,11 +1,12 @@
 import os, subprocess, argparse
+from utils import submit_job_and_wait
 
 # Instruction to run
 # proj_path="/sc/arion/projects/DiseaseGeneCell/Huang_lab_project/BioResNetwork/Phuc/projects/Alzheimer/human_atlas/sub_projects/plasma_proteome"
 # python $proj_path/scripts/tree_based_methods_auto-script.py --atlas_smal_path $proj_path/results/atlas_highly_var_genes_merged_corr-thres-0.8_graph-merged.tsv --atlas_path /sc/arion/projects/DiseaseGeneCell/Huang_lab_project/BioResNetwork/Phuc/datasets/atlas_data/analysis/tabula_sapiens/cell_tissue/specificity_metric/tabula_sapiens_pseudobulk_gene_exp_logcounts.tsv --save_path_suffix random_forest_with_atlas_corr-thres-0.8 --output_label HR
 
-BASH_SCRIPT_DIR = "bash_scripts/tree_based_methods.sh"
-DISEASE_PROT_DIR = "/sc/arion/projects/DiseaseGeneCell/Huang_lab_project/BioResNetwork/Phuc/datasets/plasma_proteome/data"
+BASH_SCRIPT_DIR = "/mnt/vm-shared-storage/biomarker-tracing/bash_scripts/tree_based_methods.sh"
+DISEASE_PROT_DIR = "/mnt/vm-shared-storage/plasma_proteome_gnpc"
 
 
 def main(in_args):
@@ -36,10 +37,13 @@ def main(in_args):
         command = ["bsub"] + lsf_params + ["-oo", f"{log_path}/{disease}.stdout", "-eo", f"{log_path}/{disease}.stderr"] + ["bash", BASH_SCRIPT_DIR] + args
         
         if dis_name == in_args.disease_name:
-            subprocess.run(command)
+            # 2. CHANGE: subprocess.run(command) -> submit_job_and_wait(command)
+            submit_job_and_wait(command)
             break
         elif in_args.disease_name == "":
-            subprocess.run(command)
+            # 3. CHANGE: subprocess.run(command) -> submit_job_and_wait(command)
+            submit_job_and_wait(command)
+
 
 
 if __name__ == "__main__":

@@ -19,8 +19,8 @@ from utils import load_prot_data
 
 warnings.simplefilter("ignore", RuntimeWarning)
 
-GENE_ID_SYMBOLS = "/sc/arion/projects/DiseaseGeneCell/Huang_lab_project/BioResNetwork/Phuc/datasets/Alzheimer/CSF_proteomics_AD_onset/gene_id_symbol_df.tsv"
-GENE_ID_HGNC = "/sc/arion/projects/DiseaseGeneCell/Huang_lab_project/BioResNetwork/Phuc/datasets/Alzheimer/CSF_proteomics_AD_onset/gene_id_symbol_hgnc.tsv"
+GENE_ID_SYMBOLS = "/mnt/vm-shared-storage/Gene_ID_symbols_files/gene_id_symbol_df.tsv"
+GENE_ID_HGNC = "/mnt/vm-shared-storage/Gene_ID_symbols_files/gene_id_symbol_hgnc.tsv"
 
 
 def permute_importance(args, prot_spec_final: pd.DataFrame, atlas_smal: pd.DataFrame):

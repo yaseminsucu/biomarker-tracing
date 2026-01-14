@@ -1,9 +1,9 @@
 import os, subprocess
 import argparse
+from utils import submit_job_and_wait 
 
-BASH_SCRIPT_DIR = "bash_scripts/elasticnet_kfold_ver2.sh"
-DISEASE_PROT_DIR = "/sc/arion/projects/DiseaseGeneCell/Huang_lab_project/BioResNetwork/Phuc/datasets/plasma_proteome/data"
-
+BASH_SCRIPT_DIR = "/mnt/vm-shared-storage/biomarker-tracing/bash_scripts/elasticnet_kfold_ver2.sh"
+DISEASE_PROT_DIR = "/mnt/vm-shared-storage/plasma_proteome_gnpc"
 # Example run:
 # python /sc/arion/projects/DiseaseGeneCell/Huang_lab_project/BioResNetwork/Phuc/projects/Alzheimer/human_atlas/sub_projects/plasma_proteome/scripts/elastic_kfold_ver2_auto-script.py --atlas_smal_path $proj_path/results/atlas_data/atlas_all_cell_tissues.tsv --atlas_path /sc/arion/projects/DiseaseGeneCell/Huang_lab_project/BioResNetwork/Phuc/datasets/atlas_data/analysis/tabula_sapiens/cell_tissue/specificity_metric/tabula_sapiens_pseudobulk_gene_exp_logcounts.tsv --save_path_suffix all_cell_tissues
 
@@ -35,10 +35,12 @@ def main(in_args):
         command = ["bsub"] + lsf_params + ["-oo", f"{log_path}/{disease}.stdout", "-eo", f"{log_path}/{disease}.stderr"] + ["bash", BASH_SCRIPT_DIR] + args
 
         if dis_name == in_args.disease_name:
-            subprocess.run(command)
+            # CHANGE: subprocess.run(command) TO:
+            submit_job_and_wait(command) 
             break
         elif in_args.disease_name == "":
-            subprocess.run(command)
+            # CHANGE: subprocess.run(command) TO:
+            submit_job_and_wait(command)
 
 
 if __name__ == "__main__":

@@ -1,7 +1,8 @@
 import os, subprocess, argparse
+from utils import submit_job_and_wait
 
-BASH_SCRIPT_DIR = "bash_scripts/stability_analyses.sh"
-DISEASE_PROT_DIR = "/sc/arion/projects/DiseaseGeneCell/Huang_lab_project/BioResNetwork/Phuc/datasets/plasma_proteome/data"
+BASH_SCRIPT_DIR = "/mnt/vm-shared-storage/biomarker-tracing/bash_scripts/stability_analyses.sh"
+DISEASE_PROT_DIR = "/mnt/vm-shared-storage/plasma_proteome_gnpc"
 
 
 def main(in_args):
@@ -22,7 +23,7 @@ def main(in_args):
         save_full_path = os.path.join(save_path, dis_name)
         os.makedirs(save_path, exist_ok=True)
         log_path = save_full_path
-
+        
         args = [
             in_args.atlas_path, in_args.atlas_smal_path, base_path, save_full_path, dis_name, in_args.output_label,
             str(in_args.thres), str(in_args.abs_hr), str(in_args.ztransform_type)
@@ -30,12 +31,13 @@ def main(in_args):
         command = ["bsub"] + lsf_params + ["-oo", f"{log_path}/{disease}.stdout", "-eo", f"{log_path}/{disease}.stderr"] + ["bash", BASH_SCRIPT_DIR] + args
         
         if dis_name == in_args.disease_name:
-            subprocess.run(command)
+            # 2. CHANGE: subprocess.run(command) -> submit_job_and_wait(command)
+            submit_job_and_wait(command)
             break
         elif in_args.disease_name == "":
-            subprocess.run(command)
-
-
+            # 3. CHANGE: subprocess.run(command) -> submit_job_and_wait(command)
+            submit_job_and_wait(command)
+        
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 

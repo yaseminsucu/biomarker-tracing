@@ -1,11 +1,9 @@
-#!/bin/bash
-
 # Load the modules
-module load anaconda3/latest
-source activate scanpy-env
+#module load anaconda3/latest
+#source activate scanpy-env
 
 # Get the names of params
-script_dir="python_main_cell_type_spec_method/elastic_kfold_ver2.py"
+script_dir="/mnt/vm-shared-storage/biomarker-tracing/python_main_cell_type_spec_method/elastic_kfold_ver2.py"
 atlas_path=$1
 atlas_smal_path=$2
 prot_data_path=$3
