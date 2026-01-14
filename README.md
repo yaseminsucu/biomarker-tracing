@@ -3,7 +3,6 @@
 This repository contains a **VM-compatible adaptation** of **Phuc Nguyen's biomarker tracing pipeline**, originally designed to run on an HPC environment.  
 The goal of this fork is to enable running the pipeline on the **AD Workbench virtual machine** with minimal changes to the original analysis logic.
 
-## Attribution
 - **Original pipeline author:** Phuc Nguyen 
 - **Original repository / reference:**  https://github.com/Mustardburger/biomarker-tracing
 - This repo is maintained by **Yasemin Sucu** and focuses on VM portability (paths, execution wrappers, and environment setup).
@@ -19,8 +18,6 @@ Compared to the HPC version, this repository includes modifications to:
 
 ## Requirements
 - OS: Linux (tested on AD Workbench VM)
-- Python: [version]
-- R: [version] (if applicable)
 - Dependencies: see `packages.yml` in the original repository 
 
 
