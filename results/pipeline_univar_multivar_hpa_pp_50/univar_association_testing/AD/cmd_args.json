@@ -1,0 +1,12 @@
+{
+    "atlas_smal_path": "/hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing/tutorial/atlas_outputs/human_protein_atlas_seismic_cell_spec_matrix_pp_50.tsv",
+    "prot_data_path": "/hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing/gnpc_sumstats/",
+    "save_path": "/hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing/gnpc_run_results/pipeline_univar_multivar_hpa_pp_50//univar_association_testing/AD",
+    "disease": "AD",
+    "output_label": "z_score",
+    "abs_hr": 0,
+    "gene_weight_minmax": 0,
+    "covar_df": null,
+    "covar_gini": 0,
+    "ztransform_type": -1
+}
