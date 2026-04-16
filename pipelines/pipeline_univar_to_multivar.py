@@ -205,9 +205,12 @@ def main(args):
             sub_args = [
                 "--atlas_smal_path", new_atlas_smal, 
                 "--atlas_path", config['inputs']['atlas_path'], 
+                "--prot_data_path", base_path,
                 "--save_path", base_save_path,
                 "--save_path_suffix", "",
-                "--disease_name", dis_name,
+                "--disease", dis_name,
+                "--disease_type", config['inputs']['disease_type'],
+                "--popu_type", config['inputs']['popu_type'],
                 "--output_label", config['random_forest']['output_label'],
                 "--abs_hr", str(config['random_forest']['abs_hr']),
                 "--param_search", str(config['random_forest']['param_search']),

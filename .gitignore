@@ -16,3 +16,5 @@ tmp/
 # Editor / backups
 *~
 *.backup
+*.rds
+*.tar.gz
