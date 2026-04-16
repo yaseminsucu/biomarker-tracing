@@ -1,0 +1,44 @@
+Sender: LSF System <lsfadmin@lh06c27>
+Subject: Job 234570662: <atlas> in cluster <chimera> Exited
+
+Job <atlas> was submitted from host <lh06c19> by user <sucuy01> in cluster <chimera> at Thu Mar 12 03:36:10 2026
+Job was executed on host(s) <lh06c27>, in queue <premium>, as user <sucuy01> in cluster <chimera> at Thu Mar 12 03:36:15 2026
+</hpc/users/sucuy01> was used as the home directory.
+</hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing> was used as the working directory.
+Started at Thu Mar 12 03:36:15 2026
+Terminated at Thu Mar 12 03:58:33 2026
+Results reported at Thu Mar 12 03:58:33 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash bash_scripts/tree_based_methods.sh placeholder /hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing/gnpc_run_results/pipeline_univar_multivar_ts_hca_pp_50//univar_association_testing/AD/atlas_smal_path_sig_cel_tis_filtered.tsv /hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing/gnpc_sumstats/ /hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing/gnpc_run_results/pipeline_univar_multivar_ts_hca_pp_50//tree_based_methods_random_forest/AD AD z_score 1000 10 2 0.7 5 30 1 0 -1
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   1329.95 sec.
+    Max Memory :                                 440 MB
+    Average Memory :                             265.94 MB
+    Total Requested Memory :                     2000.00 MB
+    Delta Memory :                               1560.00 MB
+    Max Swap :                                   -
+    Max Processes :                              8
+    Max Threads :                                8
+    Run time :                                   1338 sec.
+    Turnaround time :                            1343 sec.
+
+The output (if any) follows:
+
+Python being used:
+/hpc/users/sucuy01/.conda/envs/scanpy-env/bin/python
+sklearn 1.3.2
+
+
+PS:
+
+Read file </hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing/gnpc_run_results/pipeline_univar_multivar_ts_hca_pp_50//tree_based_methods_random_forest/AD/AD.csv.stderr> for stderr output of this job.
+
