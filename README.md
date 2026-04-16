@@ -1,4 +1,4 @@
-#Scripts and Results from the March 12th run
+## Scripts and Results from the March 12th run
 
 
 This branch contains the minimally modified scripts of the biomarker-tracing pipeline with the run results included. 
@@ -11,7 +11,7 @@ The focus is on the **pp_50 configuration**, where plasma protein genes are inco
 
 ---
 
-#Folders 
+# Folders 
 
 ### `atlas_files/`
 
