@@ -1,0 +1,44 @@
+Sender: LSF System <lsfadmin@lc07e70>
+Subject: Job 234563597: <atlas> in cluster <chimera> Done
+
+Job <atlas> was submitted from host <lc06e51> by user <sucuy01> in cluster <chimera> at Thu Mar 12 02:26:22 2026
+Job was executed on host(s) <lc07e70>, in queue <premium>, as user <sucuy01> in cluster <chimera> at Thu Mar 12 02:26:25 2026
+</hpc/users/sucuy01> was used as the home directory.
+</hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing> was used as the working directory.
+Started at Thu Mar 12 02:26:25 2026
+Terminated at Thu Mar 12 02:27:15 2026
+Results reported at Thu Mar 12 02:27:15 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash bash_scripts/elasticnet_kfold_ver2.sh placeholder /hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing/gnpc_run_results/pipeline_univar_multivar_hpa_pp_50//univar_association_testing/AD/atlas_smal_path_sig_cel_tis_filtered.tsv /hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing/gnpc_sumstats/ /hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing/gnpc_run_results/pipeline_univar_multivar_hpa_pp_50//elastic_kfold_ver2/AD AD 100 10 0 z_score 0 -1 0
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   47.11 sec.
+    Max Memory :                                 189 MB
+    Average Memory :                             156.89 MB
+    Total Requested Memory :                     2000.00 MB
+    Delta Memory :                               1811.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   50 sec.
+    Turnaround time :                            53 sec.
+
+The output (if any) follows:
+
+Python being used:
+/hpc/users/sucuy01/.conda/envs/scanpy-env/bin/python
+sklearn 1.3.2
+
+
+PS:
+
+Read file </hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing/gnpc_run_results/pipeline_univar_multivar_hpa_pp_50//elastic_kfold_ver2/AD/AD.csv.stderr> for stderr output of this job.
+

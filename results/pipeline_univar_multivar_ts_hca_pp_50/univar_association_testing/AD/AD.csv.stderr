@@ -1,0 +1,1304 @@
+/hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing/python_main_cell_type_spec_method/utils.py:116: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df["-log10(pval)"] = -np.log10(df["P_value"])
+/hpc/users/sucuy01/Yasemin_projects/gnpc_biomarker/updated_biomarker/biomarker-tracing/python_main_cell_type_spec_method/utils.py:117: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df["z_score"] = (2*(df[col] > 1) - 1) * df["P_value"].apply(lambda x: stats.norm.isf(x / 2))
+ERROR:root:[]
+ERROR:root:None
+ERROR:root:Processing adipose_tissue_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing adipose_tissue_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing adipose_tissue_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing adipose_tissue_leukocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing adipose_tissue_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing adipose_tissue_mesenchymal_stem_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing adipose_tissue_myofibroblast_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing adipose_tissue_neutrophil
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_L2_3_6_intratelencephalic_projecting_glutamatergic_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_L5_extratelencephalic_projecting_glutamatergic_cortical_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_L6b_glutamatergic_cortical_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_astrocyte_of_the_cerebral_cortex
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_caudal_ganglionic_eminence_derived_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_cerebral_cortex_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_chandelier_pvalb_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_corticothalamic_projecting_glutamatergic_cortical_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_lamp5_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_microglial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_near_projecting_glutamatergic_cortical_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_oligodendrocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_oligodendrocyte_precursor_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_pvalb_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_sncg_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_sst_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_vascular_leptomeningeal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing angular_gyrus_vip_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing anterior_part_of_tongue_basal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing anterior_part_of_tongue_epithelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing anterior_part_of_tongue_keratinocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing anterior_part_of_tongue_leukocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing anterior_part_of_tongue_vein_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing aorta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing aorta_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing aorta_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing aorta_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing aorta_pericyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing aorta_smooth_muscle_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bladder_organ_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bladder_organ_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bladder_organ_bladder_urothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bladder_organ_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bladder_organ_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bladder_organ_mast_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bladder_organ_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bladder_organ_myofibroblast_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bladder_organ_pericyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bladder_organ_plasma_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bladder_organ_smooth_muscle_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bladder_organ_vein_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_CD4_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_CD4_positive__alpha_beta_memory_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_CD8_positive__alpha_beta_cytokine_secreting_effector_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_classical_monocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_erythrocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_memory_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_monocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_naive_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_naive_thymus_derived_CD4_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_neutrophil
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_plasma_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_platelet
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing blood_type_I_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bone_marrow_CD4_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bone_marrow_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bone_marrow_common_myeloid_progenitor
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bone_marrow_erythroid_progenitor_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bone_marrow_granulocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bone_marrow_hematopoietic_stem_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bone_marrow_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bone_marrow_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bone_marrow_memory_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bone_marrow_monocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bone_marrow_naive_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bone_marrow_neutrophil
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing bone_marrow_plasma_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing cardiac_atrium_cardiac_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing cardiac_atrium_cardiac_muscle_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing cardiac_atrium_fibroblast_of_cardiac_tissue
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing cardiac_atrium_smooth_muscle_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing cardiac_atrium_unknown
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing cardiac_ventricle_cardiac_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing cardiac_ventricle_cardiac_muscle_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing cardiac_ventricle_fibroblast_of_cardiac_tissue
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing cardiac_ventricle_unknown
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing conjunctiva_conjunctival_epithelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing cornea_conjunctival_epithelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing cornea_corneal_epithelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing cornea_radial_glial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing cornea_retinal_blood_vessel_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing coronary_artery_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing coronary_artery_endothelial_cell_of_artery
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing coronary_artery_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing coronary_artery_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing coronary_artery_pericyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing coronary_artery_smooth_muscle_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_L2_3_6_intratelencephalic_projecting_glutamatergic_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_L5_extratelencephalic_projecting_glutamatergic_cortical_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_L6b_glutamatergic_cortical_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_astrocyte_of_the_cerebral_cortex
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_caudal_ganglionic_eminence_derived_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_cerebral_cortex_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_chandelier_pvalb_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_corticothalamic_projecting_glutamatergic_cortical_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_lamp5_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_microglial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_near_projecting_glutamatergic_cortical_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_oligodendrocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_oligodendrocyte_precursor_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_pvalb_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_sncg_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_sst_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_vascular_leptomeningeal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing dorsolateral_prefrontal_cortex_vip_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing endocrine_pancreas_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing endocrine_pancreas_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing endocrine_pancreas_pancreatic_acinar_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing endocrine_pancreas_pancreatic_ductal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing endometrium_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing endometrium_epithelial_cell_of_uterus
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing endometrium_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing endometrium_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing exocrine_pancreas_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing exocrine_pancreas_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing exocrine_pancreas_myeloid_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing exocrine_pancreas_pancreatic_acinar_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing exocrine_pancreas_pancreatic_ductal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing exocrine_pancreas_pancreatic_stellate_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing eye_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing eye_conjunctival_epithelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing eye_eye_photoreceptor_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing eye_keratocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing eye_microglial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing inguinal_lymph_node_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing inguinal_lymph_node_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing inguinal_lymph_node_effector_CD4_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing inguinal_lymph_node_effector_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing inguinal_lymph_node_innate_lymphoid_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing inguinal_lymph_node_memory_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing inguinal_lymph_node_plasma_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing inguinal_lymph_node_type_I_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing kidney_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing kidney_CD4_positive_helper_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing kidney_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing kidney_kidney_epithelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing kidney_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing kidney_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lacrimal_gland_stromal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing large_intestine_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing large_intestine_CD4_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing large_intestine_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing large_intestine_enterocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing large_intestine_enterocyte_of_epithelium_of_large_intestine
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing large_intestine_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing large_intestine_goblet_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing large_intestine_intestinal_crypt_stem_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing large_intestine_intestinal_crypt_stem_cell_of_large_intestine
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing large_intestine_large_intestine_goblet_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing large_intestine_monocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing large_intestine_paneth_cell_of_colon
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing large_intestine_plasma_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing large_intestine_transit_amplifying_cell_of_colon
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing liver_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing liver_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing liver_endothelial_cell_of_hepatic_sinusoid
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing liver_erythrocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing liver_hepatocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing liver_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing liver_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing liver_monocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_CD4_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_adventitial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_basal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_basophil
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_capillary_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_classical_monocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_club_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_dendritic_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_effector_CD4_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_endothelial_cell_of_artery
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_intermediate_monocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_lung_ciliated_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_lung_microvascular_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_neutrophil
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_non_classical_monocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_pericyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_plasma_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_respiratory_goblet_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_type_I_pneumocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_type_II_pneumocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lung_vein_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_CD4_positive__alpha_beta_memory_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_CD8_positive__alpha_beta_memory_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_classical_monocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_effector_CD4_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_effector_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_innate_lymphoid_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_intermediate_monocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_mast_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_memory_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_naive_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_naive_thymus_derived_CD4_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_plasma_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_regulatory_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_stromal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing lymph_node_type_I_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing mammary_gland_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing mammary_gland_basal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing mammary_gland_endothelial_cell_of_artery
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing mammary_gland_fibroblast_of_breast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing mammary_gland_luminal_epithelial_cell_of_mammary_gland
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing mammary_gland_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing mammary_gland_pericyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing mammary_gland_plasma_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing mammary_gland_vein_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_L2_3_6_intratelencephalic_projecting_glutamatergic_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_L5_extratelencephalic_projecting_glutamatergic_cortical_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_L6b_glutamatergic_cortical_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_astrocyte_of_the_cerebral_cortex
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_caudal_ganglionic_eminence_derived_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_cerebral_cortex_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_chandelier_pvalb_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_corticothalamic_projecting_glutamatergic_cortical_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_lamp5_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_microglial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_near_projecting_glutamatergic_cortical_neuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_oligodendrocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_oligodendrocyte_precursor_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_pvalb_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_sncg_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_sst_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_vascular_leptomeningeal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing middle_temporal_gyrus_vip_GABAergic_cortical_interneuron
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_of_abdomen_capillary_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_of_abdomen_endothelial_cell_of_vascular_tree
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_of_abdomen_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_of_abdomen_mesenchymal_stem_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_of_abdomen_pericyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_of_abdomen_skeletal_muscle_satellite_stem_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_of_pelvic_diaphragm_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_of_pelvic_diaphragm_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_of_pelvic_diaphragm_capillary_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_of_pelvic_diaphragm_endothelial_cell_of_vascular_tree
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_of_pelvic_diaphragm_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_of_pelvic_diaphragm_mesenchymal_stem_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_of_pelvic_diaphragm_pericyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_of_pelvic_diaphragm_skeletal_muscle_satellite_stem_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_tissue_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_tissue_capillary_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_tissue_endothelial_cell_of_vascular_tree
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_tissue_fast_muscle_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_tissue_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_tissue_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_tissue_mesenchymal_stem_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_tissue_pericyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_tissue_skeletal_muscle_satellite_stem_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing muscle_tissue_tendon_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing myometrium_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing myometrium_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing myometrium_myometrial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing myometrium_vascular_associated_smooth_muscle_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_CD4_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_CD4_positive_helper_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_acinar_cell_of_salivary_gland
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_adventitial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_duct_epithelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_memory_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_monocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_myoepithelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_naive_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing parotid_gland_neutrophil
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing posterior_part_of_tongue_basal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing posterior_part_of_tongue_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing posterior_part_of_tongue_keratinocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing posterior_part_of_tongue_leukocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing posterior_part_of_tongue_vein_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing prostate_gland_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing prostate_gland_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing prostate_gland_basal_cell_of_prostate_epithelium
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing prostate_gland_club_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing prostate_gland_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing prostate_gland_epithelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing prostate_gland_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing prostate_gland_luminal_cell_of_prostate_epithelium
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing prostate_gland_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing prostate_gland_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing prostate_gland_myeloid_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing prostate_gland_smooth_muscle_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing rectus_abdominis_muscle_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing rectus_abdominis_muscle_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing rectus_abdominis_muscle_capillary_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing rectus_abdominis_muscle_endothelial_cell_of_vascular_tree
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing rectus_abdominis_muscle_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing rectus_abdominis_muscle_mesenchymal_stem_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing rectus_abdominis_muscle_pericyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing rectus_abdominis_muscle_skeletal_muscle_satellite_stem_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing retinal_neural_layer_Mueller_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing retinal_neural_layer_eye_photoreceptor_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing sclera_dendritic_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing sclera_keratocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing sclera_retinal_blood_vessel_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing sclera_stromal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_abdomen_CD8_positive__alpha_beta_memory_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_abdomen_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_abdomen_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_abdomen_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_abdomen_mast_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_abdomen_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_abdomen_muscle_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_abdomen_stromal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_body_CD1c_positive_myeloid_dendritic_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_body_CD4_positive__alpha_beta_memory_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_body_CD8_positive__alpha_beta_memory_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_body_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_body_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_body_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_body_mast_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_body_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_body_muscle_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_body_stromal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_chest_CD8_positive__alpha_beta_memory_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_chest_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_chest_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_chest_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_chest_mast_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_chest_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_chest_muscle_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing skin_of_chest_stromal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing small_intestine_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing small_intestine_CD4_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing small_intestine_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing small_intestine_enterocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing small_intestine_enterocyte_of_epithelium_of_small_intestine
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing small_intestine_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing small_intestine_intestinal_crypt_stem_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing small_intestine_intestinal_tuft_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing small_intestine_paneth_cell_of_epithelium_of_small_intestine
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing small_intestine_plasma_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing small_intestine_small_intestine_goblet_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing small_intestine_transit_amplifying_cell_of_small_intestine
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_CD4_positive__alpha_beta_memory_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_CD8_positive__alpha_beta_memory_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_classical_monocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_erythrocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_innate_lymphoid_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_intermediate_monocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_memory_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_naive_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_naive_thymus_derived_CD4_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_naive_thymus_derived_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_neutrophil
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_plasma_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_regulatory_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing spleen_type_I_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing subcutaneous_adipose_tissue_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing subcutaneous_adipose_tissue_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing subcutaneous_adipose_tissue_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing subcutaneous_adipose_tissue_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing subcutaneous_adipose_tissue_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing subcutaneous_adipose_tissue_myofibroblast_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing sublingual_gland_acinar_cell_of_salivary_gland
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing sublingual_gland_basal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing sublingual_gland_duct_epithelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing sublingual_gland_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing sublingual_gland_endothelial_cell_of_lymphatic_vessel
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing sublingual_gland_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing sublingual_gland_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing sublingual_gland_plasma_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_CD4_positive_helper_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_CD8_positive__alpha_beta_cytotoxic_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_DN1_thymic_pro_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_DN3_thymocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_T_follicular_helper_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_capillary_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_endothelial_cell_of_artery
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_endothelial_cell_of_lymphatic_vessel
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_innate_lymphoid_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_mature_NK_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_medullary_thymic_epithelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_memory_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_monocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_naive_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_naive_regulatory_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_plasma_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_thymocyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_vascular_associated_smooth_muscle_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing thymus_vein_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing tongue_basal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing trachea_B_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing trachea_CD8_positive__alpha_beta_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing trachea_T_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing trachea_basal_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing trachea_ciliated_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing trachea_connective_tissue_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing trachea_endothelial_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing trachea_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing trachea_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing trachea_neutrophil
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing trachea_plasma_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing trachea_secretory_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing uterus_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing vasculature_fibroblast
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing vasculature_macrophage
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing vasculature_pericyte
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+ERROR:root:Processing vasculature_smooth_muscle_cell
+/hpc/users/sucuy01/.conda/envs/scanpy-env/lib/python3.11/site-packages/scipy/stats/_morestats.py:1882: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
